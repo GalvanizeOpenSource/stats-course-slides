@@ -1,0 +1,194 @@
+\section{Counting (Combinatorics)}
+
+%
+\frame{ 
+The basic problem solving skill you need to solve problems in probability is \textbf{counting} (no, really).
+}%
+
+%
+\frame{
+
+For example:
+
+\begin{itemize}
+\item How many ways are there to arrange four letters of the alphabet?
+\item How many ways are there to arrange four \textit{different} letters of the alphabet.
+\item How many ways are there to arrange 25 math books on a bookshelf.
+\item How many five card hands are full houses.
+\item How many five card hands have three of a kind.
+\item How many five card hands have three of a kind and are not also full
+houses.
+\end{itemize}
+
+}%
+
+%
+\frame{
+
+\textbf{Basic Counting Principle}
+
+If a task can be accomplished as a series steps, then the number of outcomes of the task is the \textbf{product} of the number of outcomes of each individual step.
+
+}%
+
+%
+\frame{
+
+How many ways are there to arrange four letters of the alphabet?
+
+Think: How can we accomplish this task...
+
+{\center \_ \_ \_ \_}
+
+}%
+
+%
+\frame{
+
+How many ways are there to arrange four letters of the alphabet?
+
+Think: How can we accomplish this task...
+
+Pick the first letter, write it down.
+
+$\Rightarrow$ Pick the second letter, write it down.
+
+$\Rightarrow$ Pick the third letter, write it down.
+
+$\Rightarrow$ Pick the fourth letter, write it down.
+
+}%
+
+%
+\frame{
+
+$$ 26 \times 26 \times 26 \times 26 = 456976 $$
+
+}%
+
+%
+\frame{
+
+How would this change if we could \textbf{not} re-use a letter?
+
+}%
+
+%
+\frame{
+
+The previous example is a common situation:  we are pulling from a pool of objects, and we \textbf{cannot} re-use an object once selected.
+
+This is called \textbf{selection without replacement}.
+
+}%
+
+\frame{
+
+The number of \textbf{ordered} selections \textbf{of k objects} without replacement \textbf{from a population for k objects} is called the \textbf{number of permutations of k objects taken from n}.
+
+$$ P(n, k) = \underbrace{n \times (n-1) \times (n-2) \times \ldots \times (n - k + 1)}_{\text{k total factors}} $$
+
+}%
+
+
+%
+\frame{
+
+You have 25 math and stats books on a bookshelf.  How many ways are there to arrange these books in any order?
+
+}%
+
+%
+\frame{
+
+$$ 25 \times 24 \times 23 \times \ldots \times 2 \times 1 = 15511210043330985984000000 $$
+
+}%
+
+%
+\frame{
+
+What if we have a procedure in which the order of choices does not matter?
+
+How many 5 card hands are possible when drawing from a standard 52 card deck?
+
+Notice that the \textbf{order in which we draw cards is not important here}.
+
+}%
+
+%
+\frame{
+
+\textbf{Think:} To choose an \text{ordered} list of five cards I can \text{first} chose the five cards I want to use \text{and then} choose a way to order them.
+
+$$ \text{\# of ordered hands} = \text{\# of unordered hands} \times \text{\# of ways to order five cards}$$
+
+}%
+
+%
+\frame{
+
+$$ 52 \times 51 \times 50 \times 49 \times 48 = \text{\# of unordered hands} \times 5 \times 4 \times 3 \times 2 \times 1 $$
+
+}%
+
+%
+\frame{
+
+$$ \text{\# of unordered hands} = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} $$
+
+}
+
+%
+\frame{
+
+The number of \text{unordered} selections \textbf{of k objects} without replacement \textbf{from a population for k objects} is called the \textbf{number of combinations of k objects taken from n}.
+
+$$ C(n, k) = \frac{P(n, k)}{P(k, k)} $$
+
+}%
+
+\frame{
+
+A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
+
+}
+
+%
+\frame{
+
+A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
+
+Choose a value for the pair
+
+$\Rightarrow$ Choose two cards of that value
+
+$\Rightarrow$ Chose a value for the three of a kind
+
+$\Rightarrow$ Choose three cards of that value
+
+}%
+
+%
+\frame{
+
+A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
+
+Choose a value for the pair
+
+$\Rightarrow$ Choose two cards of that value
+
+$\Rightarrow$ Chose a value for the three of a kind
+
+$\Rightarrow$ Choose three cards of that value
+
+$$ 13 \times C(4, 2) \times 12 \times C(4, 3) = 13 \times 6 \times 12 \times 4 = 3744 $$
+
+}%
+
+%
+\frame{
+
+How many hands are there that contain a three-of-kind that are not full houses?
+
+}%

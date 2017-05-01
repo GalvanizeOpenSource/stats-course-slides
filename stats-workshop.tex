@@ -1,264 +1,82 @@
 \documentclass{beamer}
-\begin{document}
+\mode<presentation>{}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\graphicspath{ {/Users/matthewdrury/Presentations/boosting-presentation-for-galvanize/plots/} }
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+% Code formatting stuff.
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\scriptsize,          % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\bias}{bias}
+\DeclareMathOperator*{\var}{var}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\pd}{pd}
+\DeclareMathOperator*{\goesto}{\rightarrow}
+%\DeclareMathOperator*{\implies}{\Rightarrow}
+
 \title{Probability and Statistics Short Course: Day 1}   
 \author{Matthew Drury} 
 \date{\today} 
 
-\frame{\titlepage} 
+\begin{document}
+
+
+%
+\begin{frame}
+  \titlepage
+\end{frame}
+%
 
 \frame{\frametitle{Table of contents}\tableofcontents} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction} 
-
-%
-\frame{\Large
-
-What is Probability?
-
-What is Statistics?
-
-What is the difference?
-
-}%
-
-%
-\frame{\Large
-
-\textbf{Probability} refers to the study of patterns in a random process.
-
-When we solve problems in probability we assume that all basic features of the random process are \textbf{known}, and our goal is to discover other, deeper features.
-
-}%
-
-%
-\frame{\Large
-
-For example:
-
-If I have a coin which is \textbf{known} to land head exactly half of the time, it is a problem in \textbf{probability} to determine how often the coin will never land on heads over ten consecutive flips.
-
-}%
-
-%
-\frame{\Large
-
-\textbf{Statistics} refers to the study of random process where some basic features of the random process are \textbf{unknown}, and our goal is to \textbf{infer from observations} basic, hidden features of the random process.
-
-}%
-
-\frame{\Large
-
-For example:
-
-It is a problem in \textbf{statistics} to determine, when presented with a coin which has landed tails ten consecutive times, whether one should continue to believe it fair.
-
-}%
-
-%
-\frame{\Large
-
-In this course:
-
-\textbf{Day 1 (Tuesday):} Basics of Probability.
-
-\textbf{Day 2 (Thursday):} Basics of Statistics.
-
-}%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Counting (Combinatorics)}
-
-%
-\frame{ 
-The basic problem solving skill you need to solve problems in probability is \textbf{counting} (no, really).
-}%
-
-%
-\frame{
-
-For example:
-
-\begin{itemize}
-\item How many ways are there to arrange four letters of the alphabet?
-\item How many ways are there to arrange four \textit{different} letters of the alphabet.
-\item How many ways are there to arrange 25 math books on a bookshelf.
-\item
-\item
-\end{itemize}
-
-}%
-
-%
-\frame{
-
-\textbf{Basic Counting Principle}
-
-If a task can be accomplished as a series steps, then the number of outcomes of the task is the \textbf{product} of the number of outcomes of each individual step.
-
-}%
-
-%
-\frame{
-
-How many ways are there to arrange four letters of the alphabet?
-
-Think: How can we accomplish this task...
-
-{\center \_ \_ \_ \_}
-
-}%
-
-%
-\frame{
-
-How many ways are there to arrange four letters of the alphabet?
-
-Think: How can we accomplish this task...
-
-Pick the first letter, write it down.
-
-$\Rightarrow$ Pick the second letter, write it down.
-
-$\Rightarrow$ Pick the third letter, write it down.
-
-$\Rightarrow$ Pick the fourth letter, write it down.
-
-}%
-
-%
-\frame{
-
-$$ 26 \times 26 \times 26 \times 26 = 456976 $$
-
-}%
-
-%
-\frame{
-
-How would this change if we could \textbf{not} re-use a letter?
-
-}%
-
-%
-\frame{
-
-The previous example is a common situation:  we are pulling from a pool of objects, and we \textbf{cannot} re-use an object once selected.
-
-This is called \textbf{selection without replacement}.
-
-}%
-
-\frame{
-
-The number of \textbf{ordered} selections \textbf{of k objects} without replacement \textbf{from a population for k objects} is called the \textbf{number of permutations of k objects taken from n}.
-
-$$ P(n, k) = \underbrace{n \times (n-1) \times (n-2) \times \ldots \times (n - k + 1)}_{\text{k total factors}} $$
-
-}%
-
-
-%
-\frame{
-
-You have 25 math and stats books on a bookshelf.  How many ways are there to arrange these books in any order?
-
-}%
-
-%
-\frame{
-
-$$ 25 \times 24 \times 23 \times \ldots \times 2 \times 1 = 15511210043330985984000000 $$
-
-}%
-
-%
-\frame{
-
-What if we have a procedure in which the order of choices does not matter?
-
-How many 5 card hands are possible when drawing from a standard 52 card deck?
-
-Notice that the \textbf{order in which we draw cards is not important here}.
-
-}%
-
-%
-\frame{
-
-\textbf{Think:} To choose an \text{ordered} list of five cards I can \text{first} chose the five cards I want to use \text{and then} choose a way to order them.
-
-$$ \text{\# of ordered hands} = \text{\# of unordered hands} \times \text{\# of ways to order five cards}$$
-
-}%
-
-%
-\frame{
-
-$$ 52 \times 51 \times 50 \times 49 \times 48 = \text{\# of unordered hands} \times 5 \times 4 \times 3 \times 2 \times 1 $$
-
-}%
-
-%
-\frame{
-
-$$ \text{\# of unordered hands} = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} $$
-
-}
-
-%
-\frame{
-
-The number of \text{unordered} selections \textbf{of k objects} without replacement \textbf{from a population for k objects} is called the \textbf{number of combinations of k objects taken from n}.
-
-$$ C(n, k) = \frac{P(n, k)}{P(k, k)} $$
-
-}%
-
-\frame{
-
-A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
-
-}
-
-%
-\frame{
-
-A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
-
-Choose a value for the pair
-
-$\Rightarrow$ Choose two cards of that value
-
-$\Rightarrow$ Chose a value for the three of a kind
-
-$\Rightarrow$ Choose three cards of that value
-
-}%
-
-%
-\frame{
-
-A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
-
-Choose a value for the pair
-
-$\Rightarrow$ Choose two cards of that value
-
-$\Rightarrow$ Chose a value for the three of a kind
-
-$\Rightarrow$ Choose three cards of that value
-
-$$ 13 \times C(4, 2) \times 12 \times C(4, 3) = 13 \times 6 \times 12 \times 4 = 3744 $$
-
-}%
-
-%
-\frame{
-
-How many hands are there that contain a three-of-kind that are not full houses?
-
-}%
+\include{introduction} % Introduction
+\include{counting} % Counting principles
+\include{probability} % Probability from counting
 
 \end{document}
