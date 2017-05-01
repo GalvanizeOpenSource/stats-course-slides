@@ -1,0 +1,85 @@
+\begin{frame}
+
+Two events $A$ and $B$ are called \textbf{independent} when
+
+$$ P(A \mid B) = P(A) $$
+
+This means that \textbf{knowledge that B has or will occurr does not change our
+knowledge about whether A will occurr}.
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+Remember that the definition of conditional probability is
+
+$$ P(A \mid B) = \frac{P(A \text{ and } B)}{P(B)} $$
+
+Combining this with our definition of independence (so, below, $A$ and $B$ are
+independent
+
+$$ P(A) = P(A \mid B) = \frac{P(A \text{ and } B)}{P(B)} $$
+
+Or, rearranging things
+
+$$ P(A \text{ and } B) = P(A) P(B) $$
+
+This equation is sometimes used as the \textbf{definition} of independence,
+though I think it is less convincing.
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+Common applications of independence generally go like this:
+
+\begin{itemize}
+\item We deduce from context that some event bears no influence on another.
+\item We conclude that the two events are independent.
+\item We use either of the two equations defining independence to fo
+calculations.
+\end{itemize}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+You roll a six sided die six times, what is the probability that you roll
+\textbf{all
+the possible numbers, in decreasing order}?
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+Let's call the values of the rolls $R_1, R_2, R_3, R_4, R_5$ and $R_6$.  Then we
+are looking for
+
+$$P(R_1 = 6 \text{ and } R_2 = 5 \text{ and } R_3 = 4\text{ and } R_4 = 3 \text{
+and } R_5 = 2 \text{ and } R_6 = 1)$$
+
+Since each individual roll of the die does not influence the others, all size
+rolls are independent.  This means we can break up and multiply
+
+$$ P(R_1 = 6) \times P(R_2 = 5) \times P(R_3 = 4) \times P(R_4 = 3) \times P(R_5
+= 2) \times P(R_6 = 1) $$
+
+\end{frame}
+%
+
+%
+\begin{frame}
+Since each individual roll of the die has \textbf{six possible outcomes} and
+\textbf{only one of them is the number we are looking for} we get
+
+$$ P(\cdots) = \frac{1}{6} \times \frac{1}{6} \times \frac{1}{6} \times
+\frac{1}{6} \times \frac{1}{6} \times \frac{1}{6} = \frac{1}{46656} $$
+\end{frame}
