@@ -1,0 +1,66 @@
+\section{Common Distributions}
+
+\begin{frame}
+Some distributions are so common, they have been named and entered our shared
+statistical conciousness.
+\end{frame}
+%
+
+%
+\begin{frame}
+The two familiar random varaibles
+
+\begin{itemize}
+\item The number of heads seen in ten flips of a quarter.
+\item The number of heads seen in ten flips of a dime.
+\end{itemize}
+
+Have a \textbf{binomial distribution}.
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+\begin{align*}
+P(\text{We get} & \text{ 2 heads in 10 flips of a quarter}) \\
+%
+&= {{10}\choose{2}} \times \left(\frac{1}{2} \right)^{10} \\
+%
+&= 0.044
+\end{align*}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+The \textbf{binomial distribution} describes the number of events that happen in
+a fixed number of \textbf{attempts} when the events \textbf{individually happen
+with the same probability}.
+
+Here the individual heads happen with probability $\frac{1}{2}$, and
+
+\begin{align*}
+P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
+%
+&= {{n}\choose{k}} \times \left(\frac{1}{2} \right)^n
+\end{align*}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+If the coin in \textbf{unfair}, so that the probability of an individual head is
+$p$, then
+
+\begin{align*}
+P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
+%
+&= {{n}\choose{k}} \times p^k \times (1 - p)^{n - k}
+\end{align*}
+
+\end{frame}
