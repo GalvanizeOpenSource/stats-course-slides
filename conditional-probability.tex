@@ -1,0 +1,122 @@
+\section{Conditional Probability}
+
+%
+\begin{frame}
+
+Suppose we know that one event $C$ has already happened or will happen (the
+condition), and we want to know the probability of different event $B$.
+
+Then the \textbf{conditional probability of $A$ given $B$} is defined by
+
+$$ P(A \mid B) = \frac{\text{\# of ways A and B \textbf{both} happen}}{\text{\#
+of ways B can happen}} $$
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+What is the conditional probablility that you draw a hand contining a three of a
+kind, given that you draw a hand containing a pair?
+
+\begin{align*}
+P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\ 
+&= \frac{\text{\# of ways of drawing a three of a kind}}{\text{\# of ways of
+drawing a pair}}
+\end{align*}
+
+\textbf{Important}: Any hand contining a three of a kind \textbf{automatically}
+contains a pair!
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+$$ \text{\# of ways of drawing a three of a kind} = 13 \times {{4}\choose{3}}
+\times {{49}\choose{2}} = 61152 $$
+
+$$ \text{\# of ways of drawing a three of a kind} = 13 \times {{4}\choose{2}}
+\times {{50}\choose{2}} = 95550 $$
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+\begin{align*}
+P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\ 
+&= \frac{61152}{95550} \\
+&= 0.64
+\end{align*}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+There is another way to look at conditional probababilities
+
+\begin{align*}
+P(A & \mid B) & \\
+%
+&= \frac{\text{\# of ways A and B \textbf{both} happen}}{\text{\#
+of ways B can happen}} \\[0.5ex]
+%
+&= \frac{\frac{\text{\# of ways A and B \textbf{both} happen}}{\text{Total \# of
+things that can happen}}}{\frac{\text{\# of ways B can happen}}{\text{Total \# of
+things that can happen}}} \\[0.5ex]
+%
+&= \frac{P(A \text{ and } B)}{P(B)}
+\end{align*}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+So we could have instead computed:
+
+\begin{align*}
+P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\
+%
+&= \frac{P(\text{Drawing a three of a kind})}{P(\text{Drawing a pair}} \\
+%
+&= \frac{\frac{61152}{2598960}}{\frac{95550}{2598960}} \\
+%
+&= \frac{0.024}{0.037}
+%
+&= 0.64
+\end{align*}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+The conditional probability that you draw a full house, given that you know you
+have a three of a kind
+
+\begin{align*}
+P(\text{Drawing a} & \text{ full house} \mid \text{Drawing a pair}) = \\
+%
+&= \frac{\text{\# of ways of drawing a full house}}{\text{\# of ways of drawing
+a pair}} \\
+%
+&= \frac{ 13 \times {{4}\choose{3}} \times 12 \times {{4}\choose{2}} } {13
+\times {{4}\choose{2}} \times {{50}\choose{3}}} \\
+%
+%&= \frac{12 \times {{4}\choose{3}}} {{50}\choose{3}} \\
+%
+&= \frac{3744}{1528800} \\
+%
+&= 0.002
+\end{align*}
+
+\end{frame}
