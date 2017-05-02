@@ -126,7 +126,7 @@ P(\text{Test} & \text{ is Positive and Don't Have Disease}) \\
 We have all the pieces, so let's put them together
 
 \begin{align*}
-P(\text{Have Disease}  & \mid \text{Test is Positive)} = \\
+P(\text{Have Disease}  & \mid \text{Test is Positive}) = \\
 %
 &= \frac{  P(\text{Test is
 Positive} \mid \text{Have Disease}) P(\text{Have Disease}) } { P(\text{Test is
@@ -159,3 +159,22 @@ $$ P(\text{Have Disease}) = 0.01 $$
 likely.}
 
 \end{frame}
+%
+
+%
+\begin{frame}
+There is some terminology that is often used to understand these relationships:
+
+\begin{itemize}
+\item $P(\text{Have Disease})$ is called the \textbf{prior probability}.  It is
+what we know \textbf{before collecting evidence/data}.
+\item $P(\text{Test is Positive} \mid \text{Have Disease})$ is called the
+\textbf{likelihood}.  It is the \textbf{strength of the evidence/data we collected}.
+\item $P(\text{Have Disease } \mid \text{Test is Positive})$ is called the
+\textbf{posterior}.  It is what we know, \textbf{after collecting evidence/data}.
+\end{itemize}
+
+These ideas form the basis of \textbf{Bayesian statistics}.
+
+\end{frame}
+%
