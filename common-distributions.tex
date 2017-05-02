@@ -64,3 +64,107 @@ P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
 \end{align*}
 
 \end{frame}
+%
+
+%
+\begin{frame}
+
+In the two examples
+
+\begin{itemize}
+\item The number of Busses that arrive late to a stop in Seattle in a single
+day.
+\item The number of times my cat asks for food between 5 and 6 pm (when she is
+always fed) in a given day.
+\end{itemize}
+
+We see a similarity: they are both about the number of times an event happens
+\textbf{in a given span of time (or space)}.
+\end{frame}
+%
+
+%
+\begin{frame}
+If we assume that the busses arrive at a fixed rate (but possibly unknown), and
+the cat meows at a fixed rate, then these are both examples of the
+\textbf{Poisson Distribution}.
+
+$$ P(\text{Cat meows k times in one hour}) = e^{-\lambda} \frac{\lambda^k}{k!}
+$$
+
+The $\lambda$ above is the \textbf{rate the event occurs}.
+\end{frame}
+%
+
+%
+\begin{frame}
+Suppose we observe the cat meow 5 times in ten minutes.  What is the probability
+that the cat will not meow at all in the next five minutes?
+\end{frame}
+%
+
+%
+\begin{frame}
+The rate the cat meows is:
+
+$$ \lambda = \frac{5 \text{ meows}}{10 \text{ minuets}} = 5 \frac{ \text{
+meows}}{\text{ 10 minuets}} $$
+
+So using the poisson equation
+
+$$ P(\text{Cat meows zero times in ten minuets}) = e^{-5} \frac{5^0}{0!} = 0.007
+$$
+\end{frame}
+%
+
+%
+\begin{frame}
+What is the probability the cat meows zero times in the next hour?
+
+$$ 
+\lambda = \frac{5 \text{ meows}}{10 \text{ minuets}} = 30 \frac{ \text{
+meows}}{\text{ 60 minuets}} = 30 \frac{ \text{
+meows}}{\text{ hour}}
+$$
+
+$$ P(\text{Cat meows zero times in the next hour}) = e^{-30} \frac{5^0}{0!} =
+9.3 \times 10^{-14}
+$$
+
+Its basically impossible.
+\end{frame}
+%
+
+%
+\begin{frame}
+The $n$ in a binomial distribution and the $\lambda$ in Poisson distribution are
+called \textbf{parameters}.
+
+The general strategy for solving problems like is:
+
+\begin{itemize}
+\item Use the information in the statement of the problem to determine a likely
+distribution for the quantity of interest.
+\item Use the information in the problem to determine the values to use for the
+parameters of this distribution.
+\item Use the probability function of the distribution to compute the needed
+probability.
+\end{itemize}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+Other distributions to know:
+
+\begin{itemize}
+\item Normal Distribution.  \textbf{Parameters:} The mean $\mu$, and the
+standard deviation $\sigma$.
+\item Uniform Distribution. \textbf{Parameters:} The minimum $a$ and the maximum
+$b$.
+\item Exponentional Distribution. \textbf{Parameters:} The rate $\alpha$.
+\end{itemize}
+
+\end{frame}
