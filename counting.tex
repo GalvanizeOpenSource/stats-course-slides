@@ -27,6 +27,8 @@ houses.
 
 \textbf{Basic Counting Principle}
 
+\hfill
+
 If a task can be accomplished as a series steps, then the number of outcomes of the task is the \textbf{product} of the number of outcomes of each individual step.
 
 }%
@@ -36,9 +38,9 @@ If a task can be accomplished as a series steps, then the number of outcomes of 
 
 How many ways are there to arrange four letters of the alphabet?
 
-Think: How can we accomplish this task...
+\hfill
 
-{\center \_ \_ \_ \_}
+Think: How can we accomplish this task as a step by step process.
 
 }%
 
@@ -47,7 +49,11 @@ Think: How can we accomplish this task...
 
 How many ways are there to arrange four letters of the alphabet?
 
-Think: How can we accomplish this task...
+\hfill
+
+Think: How can we accomplish this task as a step by step process.
+
+\hfill
 
 Pick the first letter, write it down.
 
@@ -77,6 +83,8 @@ How would this change if we could \textbf{not} re-use a letter?
 \frame{
 
 The previous example is a common situation:  we are pulling from a pool of objects, and we \textbf{cannot} re-use an object once selected.
+
+\hfill
 
 This is called \textbf{selection without replacement}.
 
@@ -110,7 +118,11 @@ $$ 25 \times 24 \times 23 \times \ldots \times 2 \times 1 = 15511210043330985984
 
 What if we have a procedure in which the order of choices does not matter?
 
+\hfill
+
 How many 5 card hands are possible when drawing from a standard 52 card deck?
+
+\hfill
 
 Notice that the \textbf{order in which we draw cards is not important here}.
 
@@ -121,7 +133,10 @@ Notice that the \textbf{order in which we draw cards is not important here}.
 
 \textbf{Think:} To choose an \text{ordered} list of five cards I can \text{first} chose the five cards I want to use \text{and then} choose a way to order them.
 
-$$ \text{\# of ordered hands} = \text{\# of unordered hands} \times \text{\# of ways to order five cards}$$
+\begin{align*}
+\text{\# of} & \text{ordered hands} \\
+&= \text{\# of unordered hands} \times \text{\# of ways to order five cards}
+\end{align*}
 
 }%
 
@@ -146,6 +161,10 @@ The number of \text{unordered} selections \textbf{of k objects} without replacem
 
 $$ C(n, k) = \frac{P(n, k)}{P(k, k)} $$
 
+Another common notation:
+
+$$ {{n}\choose{k}} = \frac{P(n, k)}{P(k, k)} $$ 
+
 }%
 
 \frame{
@@ -158,6 +177,8 @@ A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the sa
 \frame{
 
 A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
+
+\hfill
 
 Choose a value for the pair
 
@@ -173,6 +194,8 @@ $\Rightarrow$ Choose three cards of that value
 \frame{
 
 A \textbf{full house} is a hand of five cards that has a \textbf{pair} of the same value, and a \textbf{three of a kind} of the same value.  How many hands of five cards are full houses?
+
+\hfill
 
 Choose a value for the pair
 
