@@ -7,7 +7,66 @@ statistical conciousness.
 %
 
 %
+\begin{frame}{Bernoulli Distribution}
+A single coin flip is an example of a \text{Bernoulli Distributed} random
+variable.
+
+The \textbf{Bernoulli distribution} describes any random event with only two possible
+outcomes.
+\end{frame}
+%
+
+%
 \begin{frame}
+
+We can draw a picture of a distribution by letting the hight of bars represent
+the probabilities of certain outcomes occuring:
+
+  \begin{figure}
+    \includegraphics[scale=0.40]{bernoulli}
+  \end{figure}
+
+This picture is called the \textbf{probability mass function} of the
+distribution.
+\end{frame}
+%
+
+%
+\begin{frame}
+
+  \begin{figure}
+    \includegraphics[scale=0.40]{bernoulli}
+  \end{figure}
+
+Notice how the first picture represents the occurance of a \textbf{common event}
+and the second a \text{rare event}.
+
+\hfill
+
+Changing the probability that the event occurs changes the shape of the
+probability mass function. This is called \textbf{varying a parameter}.
+
+\end{frame}
+%
+
+%
+\begin{frame}
+Draw pictures of the probability mass functions of the following Bernoulli
+distributions:
+
+\begin{itemize}
+\item Flipping a fair coin.
+\item Rolling a six on a six sided die.
+\item Rolling a twenty on a twenty sided die.
+\item Rolling greater than a ten on a twenty sided die.
+\end{itemize}
+
+Are any of these equally distributed?
+\end{frame}
+%
+
+%
+\begin{frame}{Binomial Distribution}
 The two familiar random variables
 
 \begin{itemize}
@@ -16,7 +75,6 @@ The two familiar random variables
 \end{itemize}
 
 Have a \textbf{binomial distribution}.
-
 \end{frame}
 %
 
@@ -41,7 +99,12 @@ The \textbf{binomial distribution} describes the number of events that happen in
 a fixed number of \textbf{attempts} when the events \textbf{individually happen
 with the same probability}.
 
-Here the individual heads happen with probability $\frac{1}{2}$, and
+\end{frame}
+%
+
+%
+\begin{frame}
+When we are flipping a fair coin, the heads happen with probability $\frac{1}{2}$, and
 
 \begin{align*}
 P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
@@ -62,6 +125,56 @@ P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
 %
 &= {{n}\choose{k}} \times p^k \times (1 - p)^{n - k}
 \end{align*}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+The binomial distribution has \textbf{two parameters}:
+
+\begin{itemize}
+\item The number of attempts, usually called $n$.
+\item The probability the event occurs in a single attempt, usually called $p$.
+\end{itemize}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+Changing either $n$ or $p$ changes the shape of the binomial probability mass
+function.
+
+  \begin{figure}
+    \includegraphics[scale=0.50]{binomial-pdf-changing-p}
+  \end{figure}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+  \begin{figure}
+    \includegraphics[scale=0.5]{binomial-pdf-changing-n}
+  \end{figure}
+
+\end{frame}
+%
+
+%
+\begin{frame}
+
+A \text{critical hit} is a roll of 20 on a 20 sided die.  In a session of
+Dungeons and Dragons, you roll the die 20 times.  What is the probability that
+you roll \textbf{at least two} critical hits.
+
+\hfill
+
+A \text{saving throw} is a roll of at least 15 on a 20 sided die.  In a sesson
+of Dungeons and Dragons you roll the die to attept a saving throw 10 times.
+What is the probability you \text{fail} all of your saving throws?
 
 \end{frame}
 %
