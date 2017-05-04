@@ -11,6 +11,8 @@ statistical conciousness.
 A single coin flip is an example of a \text{Bernoulli Distributed} random
 variable.
 
+\hfill
+
 The \textbf{Bernoulli distribution} describes any random event with only two possible
 outcomes.
 \end{frame}
@@ -20,7 +22,7 @@ outcomes.
 \begin{frame}
 
 We can draw a picture of a distribution by letting the hight of bars represent
-the probabilities of certain outcomes occuring:
+the probabilities of certain outcomes occurring:
 
   \begin{figure}
     \includegraphics[scale=0.40]{bernoulli}
@@ -38,13 +40,21 @@ distribution.
     \includegraphics[scale=0.40]{bernoulli}
   \end{figure}
 
-Notice how the first picture represents the occurance of a \textbf{common event}
+Notice how the first picture represents the occurrence of a \textbf{common event}
 and the second a \text{rare event}.
 
-\hfill
+\end{frame}
+%
+
+%
+\begin{frame}
 
 Changing the probability that the event occurs changes the shape of the
 probability mass function. This is called \textbf{varying a parameter}.
+
+  \begin{figure}
+    \includegraphics[scale=0.40]{bernoulli}
+  \end{figure}
 
 \end{frame}
 %
@@ -107,7 +117,7 @@ with the same probability}.
 When we are flipping a fair coin, the heads happen with probability $\frac{1}{2}$, and
 
 \begin{align*}
-P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
+P(\text{We get} & \text{ k heads in n flips of a coin}) \\
 %
 &= {{n}\choose{k}} \times \left(\frac{1}{2} \right)^n
 \end{align*}
@@ -121,7 +131,7 @@ If the coin in \textbf{unfair}, so that the probability of an individual head is
 $p$, then
 
 \begin{align*}
-P(\text{We get} & \text{ k heads in n flips of a quarter}) \\
+P(\text{We get} & \text{ k heads in n flips of an unfair coin}) \\
 %
 &= {{n}\choose{k}} \times p^k \times (1 - p)^{n - k}
 \end{align*}
@@ -172,8 +182,8 @@ you roll \textbf{at least two} critical hits.
 
 \hfill
 
-A \text{saving throw} is a roll of at least 15 on a 20 sided die.  In a sesson
-of Dungeons and Dragons you roll the die to attept a saving throw 10 times.
+A \text{saving throw} is a roll of at least 15 on a 20 sided die.  In a session
+of Dungeons and Dragons you roll the die to attempt a saving throw 10 times.
 What is the probability you \text{fail} all of your saving throws?
 
 \end{frame}
@@ -255,8 +265,8 @@ least two times in the next ten minuets?
 \hfill
 
 In a batch of cookie batter, you dump in 100 chocolate chips and then mix the
-result thouroughly.  You then portion out 20 equally sized cookies.  What is the
-probability that at least one cookie has no chocloate chips in it?
+result thoroughly.  You then portion out 20 equally sized cookies.  What is the
+probability that at least one cookie has no chocolate chips in it?
 
 \end{frame}
 %
@@ -283,7 +293,7 @@ and you'll start to see common patterns!
 %
 \begin{frame}
 
-The distributions we disucssed are \textbf{discrete}: the outcomes can only be
+The distributions we discussed are \textbf{discrete}: the outcomes can only be
 individualized numbers (0, 1, 2, 3, ...).  
 
 \hfill
