@@ -180,9 +180,7 @@ What is the probability you \text{fail} all of your saving throws?
 %
 
 %
-\begin{frame}
-
-In the two examples
+\begin{frame}{Poisson Distribution}
 
 \begin{itemize}
 \item The number of buses that arrive late to a stop in Seattle in a single
@@ -244,16 +242,28 @@ $$ P(\text{Cat meows zero times in the next hour}) = e^{-30} \frac{5^0}{0!} =
 9.3 \times 10^{-14}
 $$
 
-Its basically impossible.
+...it's basically impossible.
 \end{frame}
 %
 
 %
 \begin{frame}
-The $n$ in a binomial distribution and the $\lambda$ in Poisson distribution are
-called \textbf{parameters}.
 
-The general strategy for solving problems like is:
+In the same cat problem setup, what is the probability the cat meows at
+least two times in the next ten minuets?
+
+\hfill
+
+In a batch of cookie batter, you dump in 100 chocolate chips and then mix the
+result thouroughly.  You then portion out 20 equally sized cookies.  What is the
+probability that at least one cookie has no chocloate chips in it?
+
+\end{frame}
+%
+
+%
+\begin{frame}{Overview}
+The general strategy for solving problems using probability distributions like is:
 
 \begin{itemize}
 \item Use the information in the statement of the problem to determine a likely
@@ -264,20 +274,56 @@ parameters of this distribution.
 probability.
 \end{itemize}
 
+You may have to break the problem down into multiple steps to succeed.  Practice
+and you'll start to see common patterns!
+
 \end{frame}
 %
 
 %
 \begin{frame}
 
-Other distributions to know:
+The distributions we disucssed are \textbf{discrete}: the outcomes can only be
+individualized numbers (0, 1, 2, 3, ...).  
 
-\begin{itemize}
-\item Normal Distribution.  \textbf{Parameters:} The mean $\mu$, and the
-standard deviation $\sigma$.
-\item Uniform Distribution. \textbf{Parameters:} The minimum $a$ and the maximum
-$b$.
-\item Exponential Distribution. \textbf{Parameters:} The rate $\alpha$.
-\end{itemize}
+\hfill
+
+There are also \textbf{continuous distributions}.
+
 
 \end{frame}
+%
+
+%
+\begin{frame}{Normal Distribution}
+This distribution usually shows up due to the \textbf{central limit theorem}.
+
+\hfill
+
+\textbf{Parameters:} The mean $\mu$, and the standard deviation $\sigma$.
+\end{frame}
+%
+
+%
+\begin{frame}{Uniform Distribution}
+This distribution shows up when when a random event can take any value in a
+range, each result being equally likely.
+
+\hfill
+
+\textbf{Parameters:} The minimum $a$ and the maximum $b$.
+\end{frame}
+%
+
+%
+\begin{frame}{Exponential Distribution}
+This distribution describes the \textbf{time you have to wait before observing
+an event} when the events happen at a fixed rate.
+
+\hfill
+
+\textbf{Parameters:} The rate $\alpha$.
+\end{frame}
+%
+
+
