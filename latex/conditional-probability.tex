@@ -103,22 +103,20 @@ P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\
 \begin{frame}
 
 What is the conditional probability that you draw a full house, given that you know you
-have a three of a kind
+have at least a three of a kind
 
 \begin{align*}
 P(\text{Drawing a} & \text{ full house} \mid \text{Drawing a three of a kind}) = \\
 %
 &= \frac{\text{\# of ways of drawing a full house}}{\text{\# of ways of drawing
-a pair}} \\
+a three of a kind}} \\
 %
 &= \frac{ 13 \times {{4}\choose{3}} \times 12 \times {{4}\choose{2}} } {13
-\times {{4}\choose{2}} \times {{50}\choose{3}}} \\
+\times {{4}\choose{3}} \times {{50}\choose{2}}} \\
 %
-%&= \frac{12 \times {{4}\choose{3}}} {{50}\choose{3}} \\
+&= \frac{3744}{63700} \\
 %
-&= \frac{3744}{1528800} \\
-%
-&= 0.002
+&= 0.059
 \end{align*}
 
 \end{frame}
@@ -126,6 +124,9 @@ a pair}} \\
 
 %
 \begin{frame}
+What is the conditional probability that you draw a full house, given that you
+have drawn a four of a kind.
+
 What is the conditional probability that you draw a four of a kind, given that
 you know you already have a pair?
 \end{frame}
