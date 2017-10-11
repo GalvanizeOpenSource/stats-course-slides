@@ -18,30 +18,21 @@ of ways B can happen}} $$
 
 %
 \begin{frame}
-
-What is the conditional probability that you draw a hand containing a three of a
-kind, given that you draw a hand containing a pair?
+When rolling two fair, six-sided dice, what is the conditional probability that Die One shows a 2, given that the sum of Die One and Die Two is less than or equal to 5?
 
 \begin{align*}
-P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\
-&= \frac{\text{\# of ways of drawing a three of a kind}}{\text{\# of ways of
-drawing a pair}}
+P(\text{Die One} = 2   \mid \text{Die One} + \text{Die Two} \leq 5) = \\
+= \frac{\text{\# of ways of Die One is 2 while total for both is 5 or less}}{\text{\# of ways of Die One and Die Two total 5 or less}}
 \end{align*}
 
-\textbf{Important}: Any hand containing a three of a kind \textbf{automatically}
-contains a pair!
-
 \end{frame}
 %
 
 %
 \begin{frame}
 
-$$ \text{\# of ways of drawing a three of a kind} = 13 \times {{4}\choose{3}}
-\times {{49}\choose{2}} = 61152 $$
-
-$$ \text{\# of ways of drawing a pair} = 13 \times {{4}\choose{2}}
-\times {{50}\choose{3}} = 1528800 $$
+$$\text{\#of ways of Die One is 2 while total for both is 5 or less} = 3 $$
+$$ \text{\# of ways of Die One and Die Two totaling 5 or less} = 10 $$
 
 \end{frame}
 %
@@ -50,9 +41,9 @@ $$ \text{\# of ways of drawing a pair} = 13 \times {{4}\choose{2}}
 \begin{frame}
 
 \begin{align*}
-P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\
-&= \frac{61152}{1528800} \\
-&= 0.04
+P(\text{Die One} = 2 \mid \text{Die One} + \text{Die Two} \leq 5) = \\
+&= \frac{3}{10} \\
+&= 0.3
 \end{align*}
 
 \end{frame}
@@ -77,27 +68,18 @@ things that can happen}}} \\[0.5ex]
 \end{align*}
 
 \end{frame}
-%
 
-%
 \begin{frame}
 
-So we could have instead computed:
-
 \begin{align*}
-P(\text{Drawing a} & \text{ three of a kind} \mid \text{Drawing a pair}) = \\
-%
-&= \frac{P(\text{Drawing a three of a kind})}{P(\text{Drawing a pair})} \\
-%
-&= \frac{\frac{61152}{2598960}}{\frac{1528800}{2598960}} \\
-%
-&= \frac{0.024}{0.588} \\
-%
-&= 0.04
+P(\text{Die One} = 2 \mid \text{Die One} + \text{Die Two} \leq 5) = \\
+&= \frac{3/36}{10/36} \\
+&= \frac{0.0833}{0.2778} \\
+&= 0.3
 \end{align*}
 
 \end{frame}
-%
+
 
 %
 \begin{frame}
@@ -106,18 +88,21 @@ What is the conditional probability that you draw a full house, given that you k
 have at least a three of a kind
 
 \begin{align*}
-P(\text{Drawing a} & \text{ full house} \mid \text{Drawing a three of a kind}) = \\
+P(\text{Drawing a} & \text{ straight flush} \mid \text{Drawing a straight}) = \\
 %
-&= \frac{\text{\# of ways of drawing a full house}}{\text{\# of ways of drawing
-a three of a kind}} \\
+&= \frac{\text{\# of ways of drawing straight flush}}{\text{\# of ways of drawing
+a straight}} \\
 %
-&= \frac{ 13 \times {{4}\choose{3}} \times 12 \times {{4}\choose{2}} } {13
-\times {{4}\choose{3}} \times {{50}\choose{2}}} \\
+&= \frac{ 10 \times 4 } { 10 \times 4 ^ 5} \\
 %
-&= \frac{3744}{63700} \\
+&= \frac{40}{10240} \\
 %
-&= 0.059
+&= 0.0039
+%
 \end{align*}
+
+\textbf{Important}: Any hand straight flush \textbf{automatically}
+contains a straight, and we are including a royal flush as a type of straight flush!
 
 \end{frame}
 %
